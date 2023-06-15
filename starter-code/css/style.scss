@@ -1,0 +1,399 @@
+@import "./_variables.scss";
+@import "./buttons.scss";
+@import "./breakpoints.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100vw;
+  overflow-x: hidden;
+
+  #hero {
+    position: relative;
+    width: 100%;
+    margin-bottom: 100px;
+
+    .banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 83vh;
+      background: $primary-blue;
+      z-index: -1;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      clip-path: ellipse(95% 100% at 50% 0);
+      -webkit-clip-path: ellipse(95% 100% at 50% 0);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 57px 165px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      @include sm-breakpoint {
+        margin: 37px 16px;
+      }
+    }
+
+    .heading {
+      max-width: 635px;
+      margin: 0 auto;
+      margin-top: 146px;
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 37px;
+      align-items: center;
+      justify-content: center;
+
+      .title {
+        font-weight: 600;
+        font-size: $heading-l;
+        line-height: $line-spacing-l;
+        text-align: center;
+        color: $white;
+        margin-bottom: 37px;
+
+        span {
+          border-bottom: 3px solid $primary-green;
+        }
+
+        @include md-breakpoint {
+          font-size: 60px;
+          line-height: 60px;
+        }
+
+        @include sm-breakpoint {
+          font-size: 50px;
+          line-height: 50px;
+        }
+      }
+    }
+
+    .rings-1 {
+      position: absolute;
+      display: inline;
+      top: 154px;
+      left: -130px;
+      overflow: hidden;
+
+      @include md-breakpoint {
+        top: 27px;
+        left: -204px;
+      }
+
+      @include sm-breakpoint {
+        display: none;
+      }
+    }
+
+    .rings-2 {
+      position: absolute;
+      display: inline;
+      top: 370px;
+      right: -50px;
+      overflow: hidden;
+
+      @include md-breakpoint {
+        top: 281px;
+        right: -90px;
+      }
+
+      @include sm-breakpoint {
+        display: none;
+      }
+    }
+
+    .phone-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 767px;
+        height: 441px;
+
+        @include md-breakpoint {
+          width: 514px;
+          height: 296px;
+        }
+
+        @include sm-breakpoint {
+          width: 320px;
+          height: 184px;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  #cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 161px 150px;
+
+    @include md-breakpoint {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 48px;
+    }
+    @include sm-breakpoint {
+      margin: 0 16px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 56px;
+      flex: 1 0 0px;
+
+      @include md-breakpoint {
+        flex-direction: row;
+        gap: 32px;
+      }
+
+      @include sm-breakpoint {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card__number_container {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $primary-blue;
+        border-radius: 50%;
+
+        @include md-breakpoint {
+          width: 48px;
+          height: 48px;
+        }
+
+        .card__number {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 40px;
+          text-align: center;
+          color: $primary-blue;
+
+          @include md-breakpoint {
+            font-size: 16px;
+            line-height: 36px;
+            padding: 0 15px;
+          }
+        }
+      }
+
+      .card-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        flex-direction: column;
+
+        @include md-breakpoint {
+          gap: 16px;
+          align-items: flex-start;
+        }
+
+        @include sm-breakpoint {
+          align-items: center;
+        }
+
+        .card__title {
+          font-style: normal;
+          font-weight: 600;
+          font-size: $heading-s;
+          line-height: $line-spacing-s;
+          text-align: center;
+          color: $primary-blue;
+
+          @include md-breakpoint {
+            font-size: 28px;
+            line-height: 36px;
+          }
+        }
+
+        .card__description {
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 400;
+          font-size: $body;
+          line-height: $line-spacing-body;
+          text-align: center;
+          color: $primary-blue;
+
+          @include md-breakpoint {
+            font-size: 16px;
+            line-height: 28px;
+            text-align: left;
+          }
+
+          @include sm-breakpoint {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  #founder {
+    margin: 0 161px 250px;
+    width: 1112px;
+    position: relative;
+
+    @include md-breakpoint {
+      width: 689px;
+      margin-bottom: 450px;
+    }
+
+    @include sm-breakpoint {
+      width: 100%;
+      margin: 16px;
+      margin-top: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 550px;
+    }
+
+    .founder-img {
+      img {
+        width: 477px;
+        height: 477px;
+
+        @include md-breakpoint {
+          width: 218px;
+          height: 218px;
+        }
+      }
+    }
+
+    .founder-text {
+      background: #24053e;
+      width: 730px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 32px;
+      padding: 64px;
+      position: absolute;
+      top: 170px;
+      right: 0;
+
+      @include md-breakpoint {
+        width: 514px;
+        top: 100px;
+        right: 50px;
+        padding: 56px;
+        gap: 24px;
+      }
+
+      @include sm-breakpoint {
+        width: 343px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 180px;
+        align-items: center;
+        text-align: center;
+      }
+
+      .founder-text__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: $heading-m;
+        line-height: $line-spacing-m;
+        color: $white;
+        position: relative;
+
+        @include md-breakpoint {
+          font-size: 48px;
+          line-height: 56px;
+        }
+
+        @include sm-breakpoint {
+          font-size: 32px;
+          line-height: 48px;
+        }
+      }
+
+      .founder-text__desc {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 400;
+        font-size: $body;
+        line-height: $line-spacing-body;
+        color: $white;
+
+        @include md-breakpoint {
+          font-size: 16px;
+          line-height: 28px;
+        }
+      }
+
+      .rings-3 {
+        position: absolute;
+        bottom: -50px;
+        right: 65px;
+
+        @include md-breakpoint {
+          right: 0;
+          bottom: -100px;
+        }
+
+        @include sm-breakpoint {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 58px;
+    margin-bottom: 110px;
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Fraunces 144pt";
+  src: url("../assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
+
+// Colors
+$primary-blue: #24053e;
+$primary-green: #44ffa1;
+$primary-gray: #584d62;
+$white-ish: #fcf8ff;
+$white: #ffffff;
+
+// Typography
+$font-family: "Fraunces 144pt", serif;
+$heading-l: 80px;
+$line-spacing-l: 80px;
+
+$heading-m: 56px;
+$line-spacing-m: 64px;
+
+$heading-s: 32px;
+$line-spacing-s: 40px;
+
+$body: 18px;
+$line-spacing-body: 32px;
+
+// Breakpoints
+$xsBreakpoint: 576px;
+$smBreakpoint: 768px;
+$mdBreakpoint: 1024px;
+$lgBreakpoint: 1290px;
+$xlBreakpoint: 1440px;
